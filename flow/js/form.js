@@ -1284,3 +1284,60 @@ document.addEventListener('DOMContentLoaded', function () {
     localStorage.setItem('userEmail', emailInput.value);
   });
 });
+
+
+// Mobile device cart footer info paragraph change
+document.addEventListener("DOMContentLoaded", function () {
+  function updateText() {
+      let paragraphs = document.querySelectorAll(".card-footer-info p");
+      paragraphs.forEach(paragraph => {
+          if (window.innerWidth < 1025) {
+              paragraph.textContent = "Fyll i kalkylatorn ovanför för att se ditt pris";
+          } else {
+              paragraph.textContent = "Fyll i kalkylatorn till vänster för att se ditt pris";
+          }
+      });
+  }
+
+  // Run on page load
+  updateText();
+
+  // Run on window resize
+  window.addEventListener("resize", updateText);
+});
+
+
+// Read more read less
+
+jQuery(document).ready(function($){
+  function AddReadMore() {
+   //This limit you can set after how much characters you want to show Read More.
+   var carLmt = 67;
+   // Text to show when text is collapsed
+   var readMoreTxt = " Läs mer";
+   // Text to show when text is expanded
+   var readLessTxt = " Läs mindre";
+
+
+   //Traverse all selectors with this class and manupulate HTML part to show Read More
+   $(".add-read-more").each(function () {
+      if ($(this).find(".first-section").length)
+         return;
+
+      var allstr = $(this).text();
+      if (allstr.length > carLmt) {
+         var firstSet = allstr.substring(0, carLmt);
+         var secdHalf = allstr.substring(carLmt, allstr.length);
+         var strtoadd = firstSet + "<span class='second-section'>" + secdHalf + "</span><span class='read-more'>...<span>" + readMoreTxt + "</span></span><span class='read-less'>" + readLessTxt + "</span>";
+         $(this).html(strtoadd);
+      }
+   });
+
+   //Read More and Read Less Click Event binding
+   $(document).on("click", ".read-more,.read-less", function () {
+      $(this).closest(".add-read-more").toggleClass("show-less-content show-more-content");
+   });
+}
+
+AddReadMore();
+});

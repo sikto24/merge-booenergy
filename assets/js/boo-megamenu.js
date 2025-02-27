@@ -98,3 +98,12 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".main-menu-wrapper .boo-mega-sub-menu .boo-menu-left > li:nth-child(1) a").forEach(function (anchor) {
+      if (!anchor.getAttribute("href") || anchor.getAttribute("href") === "#") {
+          anchor.classList.add("no-link");
+      }
+  });
+});
+

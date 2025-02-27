@@ -108,6 +108,12 @@ h3 {
   margin-top: 1rem;
 }
 
+.button-outline:hover, .button-outline:focus {
+  background-color: var(--button-hover);
+  color: #fff;
+  border-color: var(--button-hover) !important;
+}
+
 /* .purchase-flow .card {
   border-radius: 10px;
 } */
@@ -291,6 +297,10 @@ h3 {
   color: var(--brand-vinrod);
   font-size: var(--bread-small-font-size);
   padding: 6px 8px;
+}
+
+div#package-section a:hover, div#package-section a:focus {
+  text-decoration: underline !important;
 }
 
 .rotate {
@@ -575,7 +585,7 @@ h3 {
 .consumption-medium-section #simpliform .form-control,
 .consumption-large-section #simpliform .form-control {
   width: 100%;
-  padding: 13px 10px !important;
+  padding: 11px 10px !important;
   border: 1px solid var(--strokes-light) !important;
   border-radius: 8px !important;
   color: var(--text-black);
@@ -674,3 +684,52 @@ body
   line-height: 140%;
   color: var(--text-black);
 }
+
+
+.lime-form {
+  background: #fff;
+  padding: 24px;
+  max-width: 640px;
+  border-radius: 8px;
+  border: 1px solid var(--brand-orange) !important;
+  box-shadow: 0 4px 8px #51413A1A !important;
+}
+
+.lime-form .pagination-wrapper {
+  display: block !important;
+  padding-top: 24px !important;
+}
+
+.purchase-flow .consumption-medium-section #simpliform button.btn.btn-success.submit-btn, .purchase-flow .consumption-large-section #simpliform button.btn.btn-success.submit-btn{
+width: 100% !important;
+display: block !important;
+}
+
+.lime-form #simpliform .form-group {
+  margin-bottom: 24px !important;
+}
+
+.lime-form #simpliform .form-field.field-samtycke {
+  padding-bottom: 9px;
+}
+
+
+.consumption-large-section p, .consumption-medium-section p{
+  margin-bottom: 0px !important;
+}
+
+
+  div#price-modal-portfolio .modal-dialog-centered, div#price-modal-variable .modal-dialog-centered, div#price-modal-fixed .modal-dialog-centered{
+    margin: 137.5px auto;
+    min-height: calc(100% - 275px);
+  }
+  
+  div#price-details-modal .modal-dialog-centered{
+    margin: 184px auto;
+    min-height: calc(100% - 368px);
+  }
+  
+  body.sticky-active div#price-details-modal .modal-dialog-centered{
+    margin: 137.5px auto;
+    min-height: calc(100% - 275px);
+  }

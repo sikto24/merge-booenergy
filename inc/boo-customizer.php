@@ -1,6 +1,21 @@
 <?php
 
 /**
+ * Summary of boo_sanitize_list
+ * @param mixed $input
+ * @return string
+ */
+function boo_sanitize_list_for_lists( $input ) {
+	$allowed_tags = array(
+		'ul' => array(),
+		'li' => array(),
+	);
+
+	return wp_kses( $input, $allowed_tags );
+}
+
+
+/**
  * Summary of boo_custom_customizer
  * @param mixed $wp_customize
  * @return void
@@ -27,8 +42,8 @@ function boo_custom_customizer( $wp_customize ) {
 	boo_iphone_laptop_image( $wp_customize );
 	boo_purchase_flow_fields( $wp_customize );
 	boo_purchase_flow_fields_business( $wp_customize );
-	boo_b2c_purchase_flow( $wp_customize );
 	boo_b2b_purchase_flow( $wp_customize );
+	boo_b2c_purchase_flow( $wp_customize );
 
 }
 add_action( 'customize_register', 'boo_custom_customizer' );
@@ -834,6 +849,7 @@ function boo_purchase_flow_fields( $wp_customize ) {
 		array(
 			'default' => '',
 			'transport' => 'postMessage',
+			'sanitize_callback' => 'boo_sanitize_list_for_lists',
 		)
 	);
 
@@ -844,7 +860,6 @@ function boo_purchase_flow_fields( $wp_customize ) {
 			'boo_purchase_flow_field_portfolio_desc_list',
 			array(
 				'label' => esc_html__( 'Boo Portfolio List Data', 'boo-energy' ),
-				'description' => esc_html__( 'Use "Enter" to insert a line break.', 'boo-energy' ),
 				'section' => 'boo_purchase_flow_field',
 				'settings' => 'boo_purchase_flow_field_portfolio_desc_list',
 				'type' => 'textarea',
@@ -932,6 +947,7 @@ function boo_purchase_flow_fields( $wp_customize ) {
 		array(
 			'default' => '',
 			'transport' => 'postMessage',
+			'sanitize_callback' => 'boo_sanitize_list_for_lists',
 		)
 	);
 
@@ -944,7 +960,6 @@ function boo_purchase_flow_fields( $wp_customize ) {
 				'label' => esc_html__( 'Boo Variable List Data', 'boo-energy' ),
 				'section' => 'boo_purchase_flow_field',
 				'settings' => 'boo_purchase_flow_field_variable_desc_list',
-				'description' => esc_html__( 'Use "Enter" to insert a line break.', 'boo-energy' ),
 				'type' => 'textarea',
 			)
 		)
@@ -1030,6 +1045,7 @@ function boo_purchase_flow_fields( $wp_customize ) {
 		array(
 			'default' => '',
 			'transport' => 'postMessage',
+			'sanitize_callback' => 'boo_sanitize_list_for_lists',
 		)
 	);
 
@@ -1042,7 +1058,6 @@ function boo_purchase_flow_fields( $wp_customize ) {
 				'label' => esc_html__( 'Boo Fixed List Data', 'boo-energy' ),
 				'section' => 'boo_purchase_flow_field',
 				'settings' => 'boo_purchase_flow_field_fixed_desc_list',
-				'description' => esc_html__( 'Use "Enter" to insert a line break.', 'boo-energy' ),
 				'type' => 'textarea',
 			)
 		)
@@ -1077,10 +1092,10 @@ function boo_purchase_flow_fields( $wp_customize ) {
 	// Step Text
 	$wp_customize->add_setting(
 		'boo_purchase_flow_field_second_step_title',
-		[ 
+		array(
 			'default' => 'Vart ska elen?',
 			'transport' => 'postMessage',
-		]
+		)
 	);
 
 	// Add Step Text Controls
@@ -1101,10 +1116,10 @@ function boo_purchase_flow_fields( $wp_customize ) {
 	// Step Text
 	$wp_customize->add_setting(
 		'boo_purchase_flow_field_three_step_title',
-		[ 
+		array(
 			'default' => 'Anläggningsuppgifter',
 			'transport' => 'postMessage',
-		]
+		)
 	);
 
 	// Add Step Text Controls
@@ -1155,10 +1170,10 @@ function boo_purchase_flow_fields( $wp_customize ) {
 function boo_purchase_flow_fields_business( $wp_customize ) {
 	$wp_customize->add_section(
 		'boo_purchase_flow_field_business',
-		[ 
+		array(
 			'title' => esc_html__( 'Purchase Flow Fields (Företag)', 'boo-energy' ),
 			'panel' => 'boo_theme_panel',
-		]
+		)
 	);
 
 	// Add Title
@@ -1240,6 +1255,7 @@ function boo_purchase_flow_fields_business( $wp_customize ) {
 		array(
 			'default' => '',
 			'transport' => 'postMessage',
+			'sanitize_callback' => 'boo_sanitize_list_for_lists',
 		)
 	);
 
@@ -1249,10 +1265,9 @@ function boo_purchase_flow_fields_business( $wp_customize ) {
 			$wp_customize,
 			'boo_purchase_flow_field_portfolio_desc_list_business',
 			array(
-				'label' => esc_html__( 'Boo Portfolio List Data', 'boo-energy' ),
+				'label' => esc_html__( 'Boo Fixed List Data', 'boo-energy' ),
 				'section' => 'boo_purchase_flow_field_business',
 				'settings' => 'boo_purchase_flow_field_portfolio_desc_list_business',
-				'description' => esc_html__( 'Use "Enter" to insert a line break.', 'boo-energy' ),
 				'type' => 'textarea',
 			)
 		)
@@ -1338,6 +1353,7 @@ function boo_purchase_flow_fields_business( $wp_customize ) {
 		array(
 			'default' => '',
 			'transport' => 'postMessage',
+			'sanitize_callback' => 'boo_sanitize_list_for_lists',
 		)
 	);
 
@@ -1350,7 +1366,6 @@ function boo_purchase_flow_fields_business( $wp_customize ) {
 				'label' => esc_html__( 'Boo Variable List Data', 'boo-energy' ),
 				'section' => 'boo_purchase_flow_field_business',
 				'settings' => 'boo_purchase_flow_field_variable_desc_list_business',
-				'description' => esc_html__( 'Use "Enter" to insert a line break.', 'boo-energy' ),
 				'type' => 'textarea',
 			)
 		)
@@ -1434,6 +1449,7 @@ function boo_purchase_flow_fields_business( $wp_customize ) {
 		array(
 			'default' => '',
 			'transport' => 'postMessage',
+			'sanitize_callback' => 'boo_sanitize_list_for_lists',
 		)
 	);
 
@@ -1446,7 +1462,6 @@ function boo_purchase_flow_fields_business( $wp_customize ) {
 				'label' => esc_html__( 'Boo Fixed List Data', 'boo-energy' ),
 				'section' => 'boo_purchase_flow_field_business',
 				'settings' => 'boo_purchase_flow_field_fixed_desc_list_business',
-				'description' => esc_html__( 'Use "Enter" to insert a line break.', 'boo-energy' ),
 				'type' => 'textarea',
 			)
 		)

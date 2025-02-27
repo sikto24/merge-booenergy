@@ -503,14 +503,14 @@ add_action( 'wp_ajax_nopriv_filter_notifications', 'boo_filter_notifications' );
  * Summary of Hide Backend boo_hide_acf_field_from_admin
  * @param mixed $field
  */
-add_action( 'admin_head', function () {
-	echo '<style>
-        .acf-field[data-name="boo_page_menu"],
-        .acf-field[data-name="enable_breadcrumb_secendary_color"] {
-            display: none !important;
-        }
-    </style>';
-} );
+function boo_hide_acf_field_from_admin( $field ) {
+	if ( is_admin() ) {
+		return false; // Hide from the admin UI
+	}
+	return $field;
+}
+add_filter( 'acf/load_field/name=boo_page_menu', 'boo_hide_acf_field_from_admin' );
+add_filter( 'acf/load_field/name=enable_breadcrumb_secendary_color', 'boo_hide_acf_field_from_admin' );
 
 /**
  * Class Add based on Page boo_add_custom_class_to_menu

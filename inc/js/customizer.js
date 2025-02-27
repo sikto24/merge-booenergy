@@ -30,3 +30,39 @@ jQuery(document).ready(function ($) {
     });
   });
 });
+
+// enableTinyMCE with Lists only
+
+jQuery(document).ready(function ($) {
+  function enableTinyMCE() {
+    if (typeof tinymce !== 'undefined') {
+      tinymce.init({
+        selector:
+          '#customize-control-boo_purchase_flow_field_portfolio_desc_list textarea, ' +
+          '#customize-control-boo_purchase_flow_field_variable_desc_list textarea, ' +
+          '#customize-control-boo_purchase_flow_field_fixed_desc_list textarea, ' +
+          '#customize-control-boo_purchase_flow_field_portfolio_desc_list_business textarea, ' +
+          '#customize-control-boo_purchase_flow_field_variable_desc_list_business textarea, ' +
+          '#customize-control-boo_purchase_flow_field_fixed_desc_list_business textarea',
+
+        menubar: false,
+        toolbar: 'bullist', // Only allow bullet lists
+        forced_root_block: 'li', // Force <ul> as the root block
+        valid_elements: 'li', // Only allow <ul> and <li>
+        setup: function (editor) {
+          editor.on('change', function () {
+            editor.save();
+            $(editor.targetElm).trigger('change');
+          });
+        }
+      });
+    }
+  }
+
+  enableTinyMCE();
+
+  // Reinitialize when clicking anywhere in the customizer
+  $(document).on('click', function () {
+    enableTinyMCE();
+  });
+});
