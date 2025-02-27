@@ -8,8 +8,17 @@ $boo_purchase_flow_field_four_step_title = get_theme_mod( 'boo_purchase_flow_fie
 
 ?>
 <div class="purchase-form container purchase-flow purchase-flow-main-wrapper-form">
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="tillbaka-btn">
+				<img src="<?php echo get_template_directory_uri() ?>/flow/assets/arrow-left.svg" alt="boo_logo" width="18">
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" style="text-decoration: none;"
+					class="bread fw-bold"><?php echo esc_html__( 'Tillbaka', 'boo-energy' ); ?></a>
+			</div>
+		</div>
+	</div>
 	<div class="row gy-4">
-		<div class="col-lg-8 my-5 order-1 order-lg-0">
+		<div class="col-lg-8 my-5 order-1 order-lg-0 multistep-form-left">
 			<div id="multistep-form">
 				<!-- Step 1 -->
 				<div class="step-container active-step-container">
@@ -309,10 +318,12 @@ $boo_purchase_flow_field_four_step_title = get_theme_mod( 'boo_purchase_flow_fie
 									style="font-weight: 400;">
 									<img src="<?php echo get_template_directory_uri() ?>/flow/assets/info.svg"
 										alt="info icon" width="14" height="14">
-									<p>Jag ger Boo Energi fullmakt att kontakta min nätägare och nuvarande... <span
+									<!-- <p>Jag ger Boo Energi fullmakt att kontakta min nätägare och nuvarande... <span
 											id="read-more-info"
 											style="text-decoration: underline; cursor: pointer;"><strong>Läs
-												mer</strong></span></p>
+												mer</strong></span></p> -->
+									<p class="add-read-more show-less-content">Jag ger Boo Energi fullmakt att kontakta min nätägare och nuvarande elleverantör för att komplettera uppgifter om anläggnings-ID och områdes-ID samt säga upp mitt befintliga elavtal till det datum då det löper ut.</p> 	
+												
 								</div>
 							</div>
 						</div>
@@ -441,14 +452,14 @@ $boo_purchase_flow_field_four_step_title = get_theme_mod( 'boo_purchase_flow_fie
 			</div>
 		</div>
 		<!-- Order Summary -->
-		<div class="col-lg-4 my-5">
+		<div class="col-lg-4 my-5 order-summary">
 			<div class="card p-3">
 				<p>Din beställning</p>
 				<h3 id="order-summary-title">Boo-portföljen</h3>
 				<hr>
 				<div class="row gap-2">
 					<div class="d-flex justify-content-between align-items-center">
-						<p class="fw-bold fs-5">Elpris</p>
+						<p class="fw-bold fs-6">Elpris</p>
 						<p id="order-summary-electricity-price"></p>
 					</div>
 					<div class="d-flex align-items-center gap-2">
@@ -458,7 +469,7 @@ $boo_purchase_flow_field_four_step_title = get_theme_mod( 'boo_purchase_flow_fie
 						</p>
 					</div>
 					<div class="d-flex justify-content-between align-items-center mt-3">
-						<p class="fw-bold fs-5">Månadsavgift</p>
+						<p class="fw-bold fs-6">Månadsavgift</p>
 						<p id="order-summary-fee-with-vat"></p>
 					</div>
 				</div>

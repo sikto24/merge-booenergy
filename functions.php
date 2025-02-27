@@ -288,6 +288,3 @@ function set_default_acf_page_menu( $value, $post_id, $field ) {
 	return $value;
 }
 add_filter( 'acf/load_value/name=boo_page_menu', 'set_default_acf_page_menu', 10, 3 );
-
-
-

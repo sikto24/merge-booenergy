@@ -373,7 +373,7 @@ span.notification-count {
   line-height: var(--e-global-typography-c1edeb4-line-height);
   border: 2px solid;
   border-radius: 8px;
-  padding: 16.5px;
+  padding: 6.11px 13.3px;
   max-width: 390px;
   display: flex;
   flex-direction: row;
@@ -419,6 +419,15 @@ span.notification-count {
     > a.go-back {
     padding-left: 20.5px;
   }
+  
+  .boo-mobile-menu-wrapper
+    .boo-mobile-menu-middle
+    ul
+    li
+    ul.sub-menu-active
+    > li:has(a.go-back) a{
+      padding-left: 20.5px;
+    }
 
   .boo-mobile-menu-wrapper
     .boo-mobile-menu-middle
@@ -831,7 +840,9 @@ span.notification-count {
     justify-content: center !important;
   }
 
-  
+  .footer-cta-area-wrapper .footer-cta-right {
+    padding-left: 20rem;
+  }
 }
 
 @media screen and (min-width: 1550px) {
@@ -1417,10 +1428,16 @@ body.menu-open {
   }
 
   body.body-search-opened:after {
-    opacity: 0.3;
+    opacity: 1;
     height: 100%;
     width: 100%;
-  }
+    background: hsl(0deg 0% 0% / 25%);
+}
+body.search .search-breadcrumb-area {
+  padding-top: 46px;
+  padding-bottom: 48px;
+}
+
 }
 
 @media screen and (max-width: 767px) {
@@ -1456,6 +1473,10 @@ body.menu-open {
 }
 .boo-tag.boo-tag-skolan {
   background-color: var(--e-global-color-1c78a44) !important;
+}
+
+.single-skolan .boo-tag.boo-tag-skolan {
+  margin-bottom: 0px !important;
 }
 
 /* ===  End Boo Tag Area CSS === */
@@ -1550,14 +1571,21 @@ ul.tab-area-filter-main li a {
   border-radius: 8px;
   border: solid var(--e-global-color-3335742);
   transition: all 0.3s ease-in;
+  border-width: 1px !important;
 }
 
 ul.tab-area-filter-main li a:hover,
 ul.tab-area-filter-main li a:focus,
-ul.tab-area-filter-main li a:checked,
+ul.tab-area-filter-main li a:checked {
+  background-color: var(--e-global-color-813ac8f);
+  border-color: var(--e-global-color-primary);
+  border-width: 1px !important;
+}
+
 ul.tab-area-filter-main li a.tab-filter-active {
   background-color: var(--e-global-color-813ac8f);
   border-color: var(--e-global-color-primary);
+  border-width: 2px !important;
 }
 /* ===  End Aktuell driftstatus CSS   === */
 .notifications-area-main {
@@ -1801,6 +1829,10 @@ ul.tab-area-filter-main li a.tab-filter-active {
     .boo-energy-economic-area-wrapper {
         padding: 48px 0;
     }
+    
+    body.page-id-1230 .elementor-widget-boo-flow section.container.purchase-flow {
+      padding: 0 !important;
+  }
 
 }
 

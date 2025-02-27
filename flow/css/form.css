@@ -6,7 +6,8 @@
 
 @media (min-width: 1140px) {
   .purchase-form {
-    max-width: 1140px;
+    max-width: 1060px !important;
+    padding: 0 !important;
   }
 }
 
@@ -147,11 +148,12 @@ input[type='checkbox']:checked {
 /* Add a custom checkmark for checkboxes */
 .purchase-form input[type='checkbox']:checked::before,
 .b2b-slider-section input[type='checkbox']:checked::before {
-  content: '\2713';
+  /*content: '\2713';*/
+  content: url(../../assets/img/check.png);
   color: var(--brand-orange);
   font-weight: 500;
   position: absolute;
-  top: 50%;
+  top: calc(50% - 2px);
   left: 50%;
   /* width: 10px; */
   /* height: 10px; */
@@ -197,6 +199,7 @@ input[type='checkbox']:checked {
 .datepicker {
   width: 100%;
   border-radius: 20px;
+  max-width: 344px;
 }
 
 .datepicker-view {
@@ -220,9 +223,14 @@ input[type='checkbox']:checked {
   background-color: var(--brand-orange);
   color: var(--vit);
   font-weight: 300;
+  height: 44px;
 }
 
 /* New css 12-02-25 */
+
+.input-container:has(.error-validation:not(.hidden)) .form-control{
+  border-color:#ff5500 ;
+}
 
 p.error-validation {
   color: #ff5500;
@@ -235,6 +243,31 @@ p.error-validation {
 button#download-data-button {
   margin-top: 1rem;
 }
+
+.tillbaka-btn {
+  /* padding: 8px 0; */
+  display: flex;
+  gap: 4px;
+}
+
+
+.add-read-more.show-less-content .second-section, .add-read-more.show-less-content .read-less {
+  display: none;
+}
+
+.add-read-more.show-more-content .read-more {
+  display: none;
+}
+
+.add-read-more .read-more span, .add-read-more .read-less {
+  font-weight: 700;
+  margin-left: 2px;
+  color: #000000;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+
 
 @media (min-width: 1025px) and (max-width: 1170px) {
   .container.purchase-flow .label-button {
@@ -266,6 +299,32 @@ button#download-data-button {
   .container.purchase-flow .col-lg-8 {
     width: 100%;
   }
+  
+  
+  .container.purchase-flow div#first-package, .container.purchase-flow div#second-package, .container.purchase-flow div#third-package {
+    margin-top: 16px;
+  }
+  
+  .purchase-form {
+    margin-top: 24px;
+  }
+  .multistep-form-left {
+    margin-top: 0 !important;
+  }
+  .order-summary {
+      margin-bottom: 24px !important;
+  }
+  
+
+}
+
+@media (max-width: 767px) {
+  .btn-check:checked + .label-button{
+    padding: 5px 17px;
+  }
+  .label-button{
+    padding: 6px 18px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -280,6 +339,8 @@ button#download-data-button {
   .purchase-flow .accordion-body .d-flex.justify-content-between.gap-2 {
     align-items: center;
   }
+  
+  
 }
 
 @media (max-width: 430px) {

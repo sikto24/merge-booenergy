@@ -201,4 +201,15 @@
       center;
     transform: translateY(-50%);
   }
+
+  .main-menu-wrapper .boo-mega-sub-menu .boo-menu-left > li:nth-child(1) a[href="#"]::after,
+  .main-menu-wrapper .boo-mega-sub-menu .boo-menu-left > li:nth-child(1) a:not([href])::after {
+      opacity: 0;
+      content: "";
+  } 
+  
+  .main-menu-wrapper .boo-mega-sub-menu .boo-menu-left > li:nth-child(1) a.no-link::after {
+    display: none;
+}
+  
 }

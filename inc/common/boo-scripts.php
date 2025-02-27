@@ -53,7 +53,7 @@ function boo_theme_scripts() {
 
 	wp_enqueue_script( 'boo-slick-slider', BOO_THEME_JS_DIR . 'slick.min.js', array( 'jquery' ), '1.9.0', true );
 	wp_enqueue_script( 'magnific-popup', BOO_THEME_JS_DIR . 'jquery.magnific-popup.min.js', array( 'jquery' ), '1.1.0', true );
-	wp_enqueue_script( 'boo-main', BOO_THEME_JS_DIR . 'script.js', array( 'jquery' ), '1.1.1', true );
+	wp_enqueue_script( 'boo-main', BOO_THEME_JS_DIR . 'main.js', array( 'jquery' ), false, true );
 
 
 	// JS based on Section / Page
@@ -88,6 +88,11 @@ function boo_theme_scripts() {
 		) );
 
 	}
+
+
+
+
+
 }
 add_action( 'wp_enqueue_scripts', 'boo_theme_scripts' );
 
