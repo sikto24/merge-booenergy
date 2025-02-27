@@ -1,0 +1,17 @@
+.sortable-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sortable-item {
+  background: #f4f4f4;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  cursor: grab;
+}
+
+.sortable-item:hover {
+  background: #e4e4e4;
+}

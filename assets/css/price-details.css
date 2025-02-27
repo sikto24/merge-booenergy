@@ -1,0 +1,383 @@
+.new-connection-repeater .accordion-body {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.new-connection-repeater .accordion-body:before {
+  position: absolute;
+  content: '';
+  left: 16px;
+  top: 0;
+  width: calc(100% - 32px);
+  height: 1px;
+  background: var(--e-global-color-3335742);
+}
+
+.mobile-price-breakdown .accordion-body:before {
+  display: none;
+}
+.new-connection-repeater .accordion-item:first-of-type .accordion-button {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.new-connection-repeater .new-connection-repeater-item p {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px !important;
+}
+.new-connection-repeater .accordion-header h6 span.price {
+  flex-basis: 20%;
+  justify-content: end;
+}
+
+.new-connection-repeater .new-connection-repeater-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.new-connection-repeater .accordion-body {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  position: relative;
+}
+.mobile-price-breakdown {
+  display: none;
+}
+.new-connection-repeater {
+  gap: 16px;
+}
+
+.new-connection-repeater .new-connection-repeater-item p span.bold {
+  font-weight: 700;
+}
+
+.new-connection-repeater
+  .new-connection-repeater-item
+  p.new-connection-repeater-title {
+  margin-bottom: 8px !important;
+}
+
+.new-connection-repeater
+  .new-connection-repeater-item
+  p.discount-new-connection
+  > .discount-new-connection-meta
+  > span {
+  display: block;
+  margin-top: 8px;
+}
+
+.new-connection-repeater
+  .new-connection-repeater-item
+  p.discount-new-connection
+  .discount-new-connection-meta {
+  text-align: end;
+}
+
+.new-connection-repeater .new-connection-repeater-item p.total-new-connection {
+  padding-top: 16px;
+  border-top: 1px solid var(--e-global-color-3335742);
+  margin-top: 8px !important;
+}
+
+.new-connection-repeater .accordion-header h6 {
+  display: flex;
+  justify-content: space-between;
+  flex-basis: 100%;
+}
+
+.new-connection-repeater .accordion-header h6 span.price {
+  color: var(--e-global-color-primary);
+}
+
+.new-connection-repeater .accordion-header span.our-price-header-title {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.new-connection-repeater
+  .accordion-header
+  span.our-price-header-title
+  span.recommend-text {
+  font-family: var(--e-global-typography-32e2797-font-family), Sans-serif;
+  font-size: var(--e-global-typography-32e2797-font-size);
+  font-weight: var(--e-global-typography-32e2797-font-weight);
+  text-transform: var(--e-global-typography-32e2797-text-transform);
+  font-style: var(--e-global-typography-32e2797-font-style);
+  line-height: var(--e-global-typography-32e2797-line-height);
+  background-color: var(--e-global-color-813ac8f);
+  padding: 6px 12px;
+  border-radius: 8px;
+  margin-right: 8px;
+}
+.new-connection-repeater .accordion-header h6 span.price {
+  display: flex;
+  flex-basis: max-content;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+
+.new-connection-repeater img.minus-icon-main {
+  display: none;
+}
+
+.new-connection-repeater
+  button.accordion-button[aria-expanded='false']
+  img.minus-icon-main {
+  display: none;
+}
+.new-connection-repeater
+  button.accordion-button[aria-expanded='false']
+  img.plus-icon-main {
+  display: block;
+}
+
+.new-connection-repeater
+  button.accordion-button[aria-expanded='true']
+  img.minus-icon-main {
+  display: block;
+}
+
+.new-connection-repeater
+  button.accordion-button[aria-expanded='true']
+  img.plus-icon-main {
+  display: none;
+}
+
+.bottom-price-breakdown-area-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.bottom-price-breakdown-area-right-top {
+  display: flex;
+}
+
+.bottom-price-breakdown-area-right-bottom,
+.bottom-price-breakdown-area-right-top,
+.bottom-price-breakdown-start {
+  display: flex;
+  column-gap: 30px;
+}
+
+.bottom-price-breakdown-area {
+  display: flex;
+  column-gap: 16px;
+  justify-content: space-between;
+  margin-top: 8px;
+  padding-top: 16px;
+  border-top: 1px solid var(--e-global-color-3335742);
+}
+
+.bottom-price-breakdown-area-left,
+.bottom-price-breakdown-area-right {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.new-connection-repeater .new-connection-repeater-item p.bold {
+  font-weight: 700;
+}
+.bottom-price-breakdown-area-end {
+  align-items: flex-end;
+  display: flex;
+}
+
+@media screen and (max-width: 1024px) {
+  .bottom-price-breakdown-area-end {
+    display: none;
+  }
+
+  .bottom-price-breakdown-start {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .new-connection-repeater .accordion-header span.our-price-header-title {
+    flex-direction: column;
+    align-items: self-start;
+    flex-basis: 80%;
+  }
+  span.desktop-price {
+    display: none;
+  }
+  .bottom-price-breakdown-area-right {
+    display: none;
+  }
+
+  .new-connection-repeater .accordion-header h6 span.mobile-price {
+    display: block !important;
+  }
+
+  .new-connection-repeater .accordion-header h6 span.price {
+    align-items: self-start;
+  }
+
+  .new-connection-repeater .accordion-header h6 span.price img {
+    height: 24px;
+    width: 24px;
+  }
+  .mobile-price-breakdown button.accordion-button img {
+    height: 16px;
+    width: 16px;
+  }
+
+  .mobile-price-breakdown button {
+    padding: 0 13px;
+    border-radius: 8px !important;
+    background: #faf9f6 !important;
+  }
+
+  .mobile-price-breakdown .accordion {
+    gap: 8px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mobile-price-breakdown .accordion .accordion-item {
+    border-radius: 8px;
+  }
+
+  .mobile-price-breakdown .accordion .accordion-item button {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+  }
+  .new-connection-repeater .new-connection-repeater-item p.bold {
+    width: 100%;
+  }
+  .mobile-price-breakdown button[aria-expanded='true'] {
+    background: transparent !important;
+  }
+  .mobile-price-breakdown .accordion-item {
+    border-width: 1px !important;
+    border: 1px solid #faf9f6 !important;
+  }
+  .new-connection-repeater .mobile-price-breakdown .accordion-body {
+    padding: 0px 13px 8px;
+  }
+  .new-connection-repeater .new-connection-repeater-item p:nth-child(2) {
+    display: none;
+  }
+  .mobile-price-breakdown {
+    display: block;
+  }
+  .mobile-price-breakdown p.bold {
+    font-weight: 400 !important;
+  }
+}
+
+/* Electricity Grid */
+
+.electricity_grid_charge_area_main
+  .electricity_grid_charge_area
+  .bottom-price-breakdown-label {
+  display: flex;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.electricity_grid_charge_area_main
+  .electricity_grid_charge_area
+  .bottom-price-breakdown-label
+  > span {
+  flex-basis: calc(100% / 3);
+  font-weight: 700;
+}
+
+.electricity_grid_charge_area_main .electricity_grid_charge_area {
+  display: flex;
+  flex-direction: column;
+}
+
+.electricity_grid_charge_area_main
+  .bottom-price-breakdown-value
+  .single-grid-price-list {
+  display: flex;
+}
+
+.electricity_grid_charge_area_main
+  .bottom-price-breakdown-value
+  .single-grid-price-list
+  > span {
+  flex-basis: calc(100% / 3);
+}
+
+.electricity_grid_charge_area_main
+  .bottom-price-breakdown-value
+  > .single-grid-price-list {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid var(--e-global-color-3335742);
+}
+
+.electricity_grid_charge_area_main.new-connection-repeater
+  .new-connection-repeater-item
+  p.total-new-connection.price-show {
+  border-top: none !important;
+  margin-top: 0px !important;
+}
+
+.electricity_grid_charge_area_main
+  .bottom-price-breakdown-value
+  > .single-grid-price-list:nth-last-child(1) {
+  border-bottom: 1px solid var(--e-global-color-3335742);
+  padding-bottom: 8px;
+}
+
+.electricity_grid_charge_area_main.new-connection-repeater
+  .new-connection-repeater-item
+  p.total-new-connection {
+  border: none !important;
+  padding: 0px;
+  margin: 0px !important;
+}
+
+.electricity_grid_charge_area_main.new-connection-repeater
+  .new-connection-repeater-item
+  p.total-new-connection
+  span.small-text {
+  font-family: var(--e-global-typography-32e2797-font-family), Sans-serif;
+  font-size: var(--e-global-typography-32e2797-font-size);
+  font-weight: var(--e-global-typography-32e2797-font-weight);
+  text-transform: var(--e-global-typography-32e2797-text-transform);
+  font-style: var(--e-global-typography-32e2797-font-style);
+  line-height: var(--e-global-typography-32e2797-line-height);
+}
+
+.electricity_grid_charge_area_main.new-connection-repeater
+  .new-connection-repeater-item
+  p {
+  justify-content: flex-start;
+}
+
+@media screen and (max-width: 767px) {
+  .electricity_grid_charge_area_main .electricity_grid_charge_area {
+    display: none;
+  }
+  .electricity_grid_charge_area_main.new-connection-repeater
+    .new-connection-repeater-item
+    .mobile-price-breakdown
+    p {
+    display: flex;
+    justify-content: space-between !important;
+  }
+  .new-connection-repeater .accordion-body {
+    gap: 8px;
+  }
+  .electricity_grid_charge_area_main.new-connection-repeater
+    .new-connection-repeater-item
+    .mobile-price-breakdown
+    p
+    strong {
+    font-weight: 400;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .electricity_grid_charge_area_main .mobile-price-breakdown {
+    display: none;
+  }
+}

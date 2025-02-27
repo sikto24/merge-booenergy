@@ -1,0 +1,13 @@
+.active {
+  display: block !important;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.bread {
+  font-size: var(--bread-font-size);
+  color: var(--text-black);
+  font-weight: 400;
+}

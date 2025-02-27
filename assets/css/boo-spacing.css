@@ -1,0 +1,53 @@
+/* Only For Desktop and Tablet */
+
+.pb-16 {
+  padding-bottom: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .d-p-88 {
+    padding-top: 88px;
+    padding-bottom: 88px;
+  }
+  .d-pt-88 {
+    padding-top: 88px !important;
+  }
+  .d-pb-88 {
+    padding-bottom: 88px !important;
+  }
+  .d-p-32 {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  .d-pt-32 {
+    padding-top: 32px;
+  }
+  .d-pb-32 {
+    padding-bottom: 32px;
+  }
+  .d-pb-24 {
+    padding-bottom: 24px;
+  }
+  .d-p-120 {
+    padding-top: 120px !important;
+    padding-bottom: 120px !important;
+  }
+}
+@media screen and (max-width: 767px) {
+  .m-pt-46 {
+    padding-top: 46px;
+  }
+  .m-pt-24 {
+    padding-top: 24px;
+  }
+  .m-pb-24 {
+    padding-bottom: 24px;
+  }
+  .m-p-24 {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+  .m-pt-32 {
+    padding-top: 32px;
+  }
+}

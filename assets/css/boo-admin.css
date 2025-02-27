@@ -1,0 +1,7 @@
+body.post-type-notification
+  table.wp-list-table
+  .title
+  strong
+  span.post-state:nth-child(3) {
+  color: #ff5500;
+}

@@ -1,0 +1,289 @@
+.purchase-form {
+  /* border: 1px solid var(--brand-orange); */
+  margin-top: 4rem;
+  background-color: var(--background);
+}
+
+@media (min-width: 1140px) {
+  .purchase-form {
+    max-width: 1140px;
+  }
+}
+
+.purchase-form input[type='text'],
+.purchase-form input[type='email'],
+.purchase-form input[type='tel'],
+.purchase-form input[type='number'],
+.purchase-form select {
+  width: 100%;
+  padding: 13px 10px;
+  border: 1px solid var(--strokes-light);
+}
+
+.purchase-form input[type='text']:focus,
+.purchase-form input[type='email']:focus,
+.purchase-form input[type='tel']:focus,
+.purchase-form input[type='number']:focus,
+.purchase-form select:focus {
+  box-shadow: none;
+}
+
+.purchase-form .form-label {
+  color: var(--text-black);
+  font-weight: 700;
+}
+
+.purchase-form .primary-button {
+  background-color: var(--brand-morkgron);
+  color: var(--vit);
+  padding: 15px 20px;
+  cursor: pointer;
+  width: 100%;
+  font-weight: 700;
+  border-radius: 8px;
+}
+
+.purchase-form .primary-button:hover {
+  background-color: var(--button-hover);
+  color: var(--vit);
+}
+
+.purchase-form .primary-button:disabled {
+  background-color: var(--strokes-light);
+  color: var(--text-grey);
+  border: none;
+  cursor: not-allowed;
+}
+
+.step-container {
+  border-radius: 8px;
+  border: 2px solid var(--brand-ljusorange);
+  padding: 1.5rem 1rem;
+}
+
+.step-container:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.step-container.active-step-container {
+  background-color: white;
+  border-color: var(--brand-orange);
+}
+
+.step-container.completed-step-container {
+  border-color: var(--brand-orange);
+}
+
+.step-number-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  background-color: var(--brand-ljusorange);
+  font-weight: 700;
+}
+
+.step {
+  display: none;
+  padding: 20px;
+}
+
+.step.active {
+  display: block;
+}
+
+.form-actions {
+  text-align: right;
+  margin-top: 20px;
+}
+
+.purchase-form .address-container-selected {
+  padding: 1.5rem;
+  border: 1px solid var(--strokes-dark);
+  border-radius: 8px;
+}
+
+.current-address-container {
+  padding: 1rem;
+  border: 1px solid var(--strokes-light);
+  background: var(--background);
+  color: black;
+  font-weight: 700;
+  margin-top: 1.5rem;
+  border-radius: 8px;
+}
+
+/* Hide the default radio button and checkbox */
+.purchase-form input[type='radio'],
+.b2b-slider-section input[type='radio'],
+input[type='checkbox'] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--brand-orange);
+  border-radius: 50%; /* For radio buttons */
+  background-color: #fff;
+  cursor: pointer;
+  position: relative;
+  outline: none;
+}
+
+.purchase-form input[type='checkbox'],
+.b2b-slider-section input[type='checkbox'] {
+  border-radius: 4px; /* For checkboxes */
+}
+
+/* Style the checked state */
+input[type='radio']:checked,
+input[type='checkbox']:checked {
+  /* background-color: var(--brand-orange); */
+  border-color: var(--brand-orange);
+}
+
+/* Add a custom checkmark for checkboxes */
+.purchase-form input[type='checkbox']:checked::before,
+.b2b-slider-section input[type='checkbox']:checked::before {
+  content: '\2713';
+  color: var(--brand-orange);
+  font-weight: 500;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* width: 10px; */
+  /* height: 10px; */
+  /* background-color: var(--brand-orange); */
+  transform: translate(-50%, -50%);
+  border-radius: 2px;
+}
+
+/* Add a custom dot for radio buttons */
+.purchase-form input[type='radio']:checked::before,
+.b2b-slider-section input[type='radio']:checked::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 13px;
+  height: 13px;
+  background-color: var(--brand-orange);
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.purchase-form .price-summary-info-text {
+  color: var(--text-grey);
+  font-size: var(--bread-small-font-size);
+  font-weight: 400;
+  padding-top: 1.2rem;
+}
+
+.custom-modal-container {
+  max-width: unset;
+  max-height: unset;
+  width: 100%;
+  height: 100%;
+  margin: 0px 0px;
+}
+
+.purchase-form .error-message {
+  font-size: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.datepicker {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.datepicker-view {
+  width: 100%;
+  padding: 1.5rem 1rem;
+}
+
+.datepicker-picker {
+  border-radius: 15px;
+}
+.datepicker-header .datepicker-controls {
+  padding: 1rem;
+}
+.datepicker-controls > button {
+  border: none;
+  background: none;
+}
+
+.datepicker-cell.selected,
+.datepicker-cell.selected:hover {
+  background-color: var(--brand-orange);
+  color: var(--vit);
+  font-weight: 300;
+}
+
+/* New css 12-02-25 */
+
+p.error-validation {
+  color: #ff5500;
+}
+
+.container.purchase-flow .accordion-body p:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+button#download-data-button {
+  margin-top: 1rem;
+}
+
+@media (min-width: 1025px) and (max-width: 1170px) {
+  .container.purchase-flow .label-button {
+    padding: 10px;
+  }
+  .container.purchase-flow .btn-check:checked + .label-button {
+    padding: 10px;
+  }
+
+  .container.purchase-flow .card h4 {
+    font-size: 22px;
+  }
+
+  .container.purchase-flow .card .higlighted-label {
+    font-size: 11px;
+  }
+
+  .container.purchase-flow .offer-price {
+    font-size: 1.2rem;
+  }
+
+  .container.purchase-flow .button-outline {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container.purchase-flow .col-lg-4,
+  .container.purchase-flow .col-lg-8 {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .purchase-flow .accordion-body p {
+    font-size: 14px;
+    margin-bottom: 10px !important;
+  }
+  .purchase-flow .accordion-body p:not(:last-child) {
+    margin-bottom: 10px !important;
+  }
+
+  .purchase-flow .accordion-body .d-flex.justify-content-between.gap-2 {
+    align-items: center;
+  }
+}
+
+@media (max-width: 430px) {
+  .purchase-flow .accordion-body p:not(:last-child) {
+    max-width: 185px;
+  }
+}

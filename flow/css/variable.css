@@ -1,0 +1,33 @@
+:root {
+  --brand-orange: #ff5500;
+  --brand-vinrod: #582a3c;
+  --brand-gul: #ffe900;
+  --brand-rosa: #fac9fa;
+  --brand-gron: #009a44;
+  --brand-gla: #0081ea;
+  --brand-ljusgal: #fffcd7;
+  --brand-morkgron: #18332f;
+  --brand-ljusgron: #64ffb4;
+  --brand-ljusbla: #6ee6ff;
+  --brand-ljusorange: #ffede5;
+  --brand-rod: #cb2c30;
+  --vit: #ffffff;
+  --svart: #000000;
+  --background: #faf9f6;
+  --strokes-light: #e2dad6;
+  --strokes-dark: #c7b0a5;
+  --text-black: #101010;
+  --text-grey: #818181;
+  --button-hover: #24544d;
+
+  --font-family: Arial, sans-serif;
+  --bread-font-size: 1rem;
+  --bread-large-font-size: 1.5rem;
+  --bread-small-font-size: 0.75rem;
+  --links-large-font-size: 1.06rem;
+  --links-font-size: 0.875rem;
+  --links-small-font-size: 0.75rem;
+
+  --plus-icon: url('data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2225%22%20viewBox%3D%220%200%2024%2025%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M12.5%201V24M1%2012.5H23.5%22%20stroke%3D%22black%22%20stroke-linecap%3D%22round%22%2F%3E%3C%2Fsvg%3E');
+  --minus-icon: url('data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%222%22%20viewBox%3D%220%200%2024%202%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M1%200.984375H23.5%22%20stroke%3D%22black%22%20stroke-linecap%3D%22round%22%2F%3E%3C%2Fsvg%3E');
+}
